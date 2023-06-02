@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .login-box {
+        @apply flex min-h-full items-center justify-center
+        py-12 px-4 sm:px-6 lg:px-8 h-screen;
+    }
+
+    .login-container {
+        @apply container border-solid box-border border-indigo-600;
+    }
+
+    .login-container-header {
+        @apply mt-6 text-center text-3xl font-bold tracking-tight
+        text-gray-300;
+    }
+
+    .login-container-switch {
+        @apply font-medium text-loginbtn hover:text-loginbtnlight;
+    }
+
+    .login-form {
+        @apply -space-y-px rounded-md shadow-sm;
+    }
+
+    .login-form-email {
+        @apply relative p-4 block w-full rounded-t-md border-0 py-1.5
+        text-gray-100 ring-0 ring-inset ring-slate-700
+        placeholder:text-gray-300 focus:z-10 focus:ring-1
+        bg-loginbar
+        focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6;
+    }
+
+    .single-form-email {
+        @apply relative p-4 block w-full rounded-md border-0 py-1.5
+        text-gray-100 ring-0 ring-inset ring-slate-700
+        placeholder:text-gray-300 focus:z-10 focus:ring-1
+        bg-chatbox
+        focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6;
+    }
+
+    .login-form-password {
+        @apply relative p-4 block w-full rounded-b-md border-0 py-1.5
+        text-gray-100 ring-0 ring-inset ring-slate-700
+        placeholder:text-gray-300 focus:z-10 focus:ring-1
+        bg-loginbar
+        focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6;
+    }
+
+    .login-form-password-mid {
+        @apply relative p-4 block w-full py-1.5 text-gray-100 ring-0
+        ring-inset ring-slate-700 placeholder:text-gray-300
+        bg-loginbar
+        focus:z-10 focus:ring-1 focus:ring-inset focus:ring-slate-600
+        sm:text-sm sm:leading-6;
+    }
+
+    .login-form-submit {
+        @apply relative flex w-full justify-center rounded-md
+        bg-loginbtn py-2 px-3 text-sm font-semibold text-white
+        hover:bg-loginbtnpressed focus-visible:outline
+        focus-visible:outline-2 focus-visible:outline-offset-2
+        focus-visible:outline-indigo-600 shadow-lg;
+    }
+
+    /* --------------------------------------------------------------- */
+    .sidebar-icon {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto bg-sidebaricon text-gray-500
+        hover:bg-green-600 hover:text-white
+        rounded-3xl hover:rounded-xl
+        transition-all duration-150 ease-linear cursor-pointer;
+    }
+
+    .discord-icon {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto bg-sidebaricon text-gray-500
+        hover:bg-discordlogo hover:text-white
+        rounded-3xl hover:rounded-xl
+        transition-all duration-150 ease-linear cursor-pointer;
+    }
+
+    .inv_remove-icon {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto bg-gray-800 text-gray-500
+        hover:bg-red-500 hover:text-white
+        rounded-3xl hover:rounded-xl
+        transition-all duration-150 ease-linear cursor-pointer;
+    }
+
+    .sidebar-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-14
+        rounded-md shadow-md text-white bg-gray-900
+        text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    }
+
+    .inv-tooltip-bottom {
+        @apply absolute w-auto p-2 m-2 min-w-max right-14
+        rounded-md shadow-md text-white bg-gray-900
+        text-xs font-bold transition-all duration-100 scale-0 origin-right;
+    }
+
+    .leave-room-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-56
+        rounded-md shadow-md text-white bg-gray-900
+        text-xs font-bold transition-all duration-100 scale-0 origin-right;
+    }
+
+    .sidebar-hr {
+        @apply bg-gray-600 dark:bg-gray-600
+        border border-gray-200 dark:border-gray-500 rounded-full
+        mx-2;
+    }
+
+    .channel-bar {
+        @apply w-80 m-0 ml-16 bg-channelbar dark:bg-channelbar overflow-hidden h-screen;
+    }
+
+    .channel-container {
+        @apply flex flex-col items-center justify-start p-1 m-0;
+    }
+
+    .channel-block {
+        @apply flex items-center justify-center h-16 m-0 p-0;
+    }
+
+    .channel-block-text {
+        @apply text-lg tracking-wider font-bold
+        text-gray-200 dark:text-gray-400
+        mr-auto ml-4 my-auto align-middle;
+    }
+
+    .dropdown {
+        @apply m-0 w-full px-2 pb-2
+        transition duration-300 ease-in-out;
+    }
+
+    .dropdown-header {
+        @apply flex flex-row items-center justify-evenly
+        mx-0 text-gray-500
+        cursor-pointer;
+    }
+
+    .dropdown-header-text {
+        @apply text-gray-500  text-opacity-90
+        text-lg font-semibold
+        cursor-default;
+    }
+
+    .dropdown-header-text-selected {
+        @apply text-blue-500 text-opacity-90 text-lg font-bold;
+    }
+
+    .dropdown-selection {
+        @apply flex flex-row items-center justify-evenly
+        mt-1 mr-auto ml-2
+        transition duration-300 ease-in-out
+        cursor-pointer;
+    }
+
+    .dropdown-selection-text {
+        @apply font-semibold tracking-wide mr-auto
+        transition duration-300 ease-in-out
+        hover:text-pink-500 dark:hover:text-gray-500
+        cursor-pointer;
+    }
+
+    /* --------------------------------------------------------------- */
+    .chatroom {
+        @apply flex-1 justify-between flex flex-col h-screen bg-chatbg;
+    }
+
+    .chatroom-chatbox {
+        @apply flex flex-col-reverse h-screen overflow-y-auto;
+    }
+
+    .chatroom-chatbox-wrap {
+        @apply flex flex-col-reverse p-3 overflow-y-auto scroll-smooth;
+    }
+
+    .chatroom-input {
+        @apply border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0;
+    }
+
+    .chatroom-input-real {
+        @apply w-full focus:outline-none
+        focus:placeholder-gray-400 text-gray-200 placeholder-gray-200
+        pl-12 bg-chatbox rounded-md py-3;
+    }
+
+    .chatmessage-wrap {
+        @apply flex flex-col text-base max-w-2xl mx-2 order-2 items-start;
+    }
+
+    .chatmessage-message {
+        @apply px-4 py-1 text-base inline-block text-gray-500 font-bold;
+    }
+}
+
+.modal-2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9997;
+}
+
+.modal-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.modal-0 {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+/* ::-webkit-scrollbar-thumb {
+	@apply bg-gray-500 dark:bg-green-400;
+} */
